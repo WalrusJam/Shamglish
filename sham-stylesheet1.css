@@ -1,0 +1,105 @@
+body {
+    text-align: center;
+    line-height: 0px;
+    transition: all 0.2s ease;
+}
+.title {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+.word {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: 700;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    animation-name: pop;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    transition: all 0.2s ease;
+}
+button {
+    position: fixed;
+    top: 150px;
+    transform: translate(-50%,-50%);
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    border: 0px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    padding: 15px;
+    transition: all 0.2s ease;
+}
+button:hover {
+    font-size: 21px;
+    color: rgb(198, 186, 186);
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+button:active {
+    font-size: 22px;
+    padding: 25px;
+    transition: all 0.2s ease;
+}
+.hex {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    animation-name: popcode;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+.word:active {
+    font-size: 85px;
+    transition: all 0.2s ease;
+}
+.word:hover::after {
+    position: fixed;
+    display: block;
+    transform: translate(-50px,-50px);
+    width: 300px;
+    height: 30px;
+    content: "Click to screenshot";
+    color: rgba(255,255,255,0.7);
+    font-size: 20px;
+    text-shadow: none;
+    transition: all 0.2 ease;
+}
+.word:active::after {
+    position: fixed;
+    display: block;
+    transform: translate(-50px,-50px);
+    width: 300px;
+    height: 30px;
+    content: "Screenshot copied!";
+    color: rgba(255,255,255,0.7);
+    font-size: 20px;
+    text-shadow: none;
+    transition: all 0.2 ease;
+}
+@keyframes pop {
+    0% {font-size: 80px;}
+    30% {font-size: 90px;}
+    100% {font-size: 80px;}
+}
+@keyframes popcode {
+    0% {font-size: 20px;}
+    30% {font-size: 21px;}
+    100% {font-size: 20px;}
+}
