@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
         <link rel="stylesheet" href = "https://fonts.googleapis.com/css?family=Outfit">
         <style>
             body {
@@ -8,7 +9,7 @@
                 transition: all 0.2s ease;
             }
             .title {
-                font-size: 40px;
+                font-size: min(9vw,6vh);
                 font-weight: 700;
                 font-family: "Outfit", sans-serif;
                 text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
@@ -20,7 +21,7 @@
                 left: 50%;
                 transform: translate(-50%,-50%);
                 color: #ffffff;
-                font-size: 80px;
+                font-size: min(12vw,12vh);
                 font-weight: 700;
                 font-family: "Outfit", sans-serif;
                 text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
@@ -31,37 +32,37 @@
             }
             button {
                 position: fixed;
-                top: 150px;
+                top: min(33.75vw,22.5vh);
                 transform: translate(-50%,-50%);
-                line-height: 50px;
-                font-size: 20px;
+                line-height: min(9.375vw, 6.25vh);
+                font-size: min(3.75vw,2.5vh);
                 font-weight: 700;
                 font-family: "Outfit", sans-serif;
                 border: 0px;
-                border-radius: 20px;
+                border-radius: min(3.75vw,2.5vh);
                 background-color: #ffffff;
                 box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-                padding: 15px;
+                padding: min(3vw,2vh);
                 transition: all 0.2s ease;
             }
             button:hover {
-                font-size: 21px;
+                font-size: min(3.9vw,2.6vh);
                 color: rgb(198, 186, 186);
-                padding: 20px;
+                padding: min(3.75vw,2.5vh);
                 transition: all 0.2s ease;
             }
             button:active {
-                font-size: 22px;
-                padding: 25px;
+                font-size: min(4.05vw,2.7vh);
+                padding: min(4.3vw,2.8vh);
                 transition: all 0.2s ease;
             }
             .hex {
                 position: fixed;
-                top: 60%;
+                top: min(calc(50vh + 10vw),60vh);
                 left: 50%;
                 transform: translate(-50%,-50%);
                 color: #ffffff;
-                font-size: 20px;
+                font-size: min(2.5vw,2.5vh);
                 font-weight: 400;
                 font-family: 'Courier New', Courier, monospace;
                 text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
@@ -70,42 +71,42 @@
                 animation-iteration-count: 1;
             }
             .word:active {
-                font-size: 85px;
+                font-size: min(12.5vw, 12.5vh);
                 transition: all 0.2s ease;
             }
             .word:hover::after {
                 position: fixed;
                 display: block;
-                transform: translate(-50px,-50px);
-                width: 300px;
-                height: 30px;
+                transform: translate(0,max(-6.25vw,-6.25vh));
+                width: min(21.25vw,21.25vh);
+                height: min(3.75vw,3.75vh);
                 content: "Click to screenshot";
                 color: rgba(255,255,255,0.7);
-                font-size: 20px;
+                font-size: min(2.5vw,2.5vh);
                 text-shadow: none;
                 transition: all 0.2 ease;
             }
             .word:active::after {
                 position: fixed;
                 display: block;
-                transform: translate(-50px,-50px);
-                width: 300px;
-                height: 30px;
-                content: "Screenshot copied!";
+                transform: translate(0,max(-6.25vw,-6.25vh));
+                width: min(21.25vw,21.25vh);
+                height: min(3.75vw,3.75vh);
+                content: "Click to screenshot";
                 color: rgba(255,255,255,0.7);
-                font-size: 20px;
+                font-size: min(2.5vw,2.5vh);
                 text-shadow: none;
                 transition: all 0.2 ease;
             }
             @keyframes pop {
-                0% {font-size: 80px;}
-                30% {font-size: 90px;}
-                100% {font-size: 80px;}
+                0% {font-size: min(12vw,12vh);}
+                30% {font-size: min(13vw,13vh);}
+                100% {font-size: min(12vw,12vh);}
             }
             @keyframes popcode {
-                0% {font-size: 20px;}
-                30% {font-size: 21px;}
-                100% {font-size: 20px;}
+                0% {font-size: min(2.5vw,2.5vh);}
+                30% {font-size: min(2.7vw,2.7vh);}
+                100% {font-size: min(2.5vw,2.5vh);}
             }
         </style>
         <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js">
