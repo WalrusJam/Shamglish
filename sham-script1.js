@@ -35,7 +35,7 @@ function gen_word (max_pair_len) {
     let common_double_vowels = ['ea', 'ai', 'ia', 'ou', 'oi', 'eu', 'au', 'oa', 'ei', 'ie', 'io', 'iu', 'ui', 'ee', 'oo']
     let vowels_three_plus = ['eau', 'uai', 'uie', 'oui', 'ieu', 'iou'];
     let endings = ['c', 'sm', 'st', 'n', 's', 'y', 'ey', 'l', 'ng', 'ck', 'ff', 'll', 'lm', 'ln', 'mn', 'm', 'pp', 'ss', 'tt', 'zz', 'nk', 'nc', 'nd', 'mp', 'nt', 'ns', 'mt', 'd', 'nch', 'nth', 'nsh', 'rd', 'rsh', 'rch', 'rk', 'rb', 'rd', 'rc', 'rf', 'rg', 'rm', 'rn', 'rp', 'rs', 'rt', 'rth', 'sch']
-    let common_endings = ['ious', 'ic', 'ous', 'ism', 'ist', 'ion', 'ian', 'ain', 'us', 'y', 'ng', 'ize', 'ice', 'ess'];
+    let common_endings = ['ious', 'ic', 'ous', 'ism', 'ist', 'ion', 'ian', 'ain', 'us', 'y', 'ng', 'ize', 'ice', 'ess', 'er', 'or', 'ar'];
     
     let pairs = [];
 
