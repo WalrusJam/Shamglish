@@ -37,6 +37,8 @@
                 top: min(33.75vw,22.5vh);
                 transform: translate(-50%,-50%);
                 line-height: min(9.375vw, 6.25vh);
+                width: min(45vw, 30vh);
+                color: black;
                 font-size: min(3.75vw,2.5vh);
                 font-weight: 700;
                 font-family: "Outfit", sans-serif;
@@ -47,15 +49,43 @@
                 padding: min(3vw,2vh);
                 transition: all 0.2s ease;
             }
-            button:hover {
+            button::after {
+                content: "Give me a fake color.";
+                color: transparent;
+                position: fixed;
+                top: 0%;
+                left: 0%;
+                transform: translate(max(-3vw, -2vh), 0);
+                line-height: min(9.375vw, 6.25vh);
+                width: min(45vw, 30vh);
+                font-size: min(3.75vw,2.5vh);
+                text-shadow: 0.5px 0.5px 1px #ffffff;
+                font-weight: 700;
+                font-family: "Outfit", sans-serif;
+                background-color: rgba(0,0,0,0.2);
+                padding: min(3vw,2vh);
+                background-clip: text;
+                mix-blend-mode: darken;
+                transition: all 0.2s ease;
+            }
+            button:hover, button:hover::after {
                 font-size: min(3.9vw,2.6vh);
-                color: rgb(198, 186, 186);
-                padding: min(3.75vw,2.5vh);
+                width: min(46.5vw, 31vh);
+                transition: all 0.2s ease;
+            }
+            button:hover::after {
+                font-size: min(3.9vw,2.6vh);
+                width: min(46.5vw, 31vh);
                 transition: all 0.2s ease;
             }
             button:active {
                 font-size: min(4.05vw,2.7vh);
-                padding: min(4.3vw,2.8vh);
+                width: min(47.6vw, 31.73vh);
+                transition: all 0.2s ease;
+            }
+            button:active::after {
+                font-size: min(4.05vw,2.7vh);
+                width: min(47.6vw, 31.73vh);
                 transition: all 0.2s ease;
             }
             .hex {
@@ -121,7 +151,7 @@
         <p id="pagetitle" class="title" style="color:#665e5e">
             Shamglish: Colors!
         </p>
-        <button id="colorbutton" onclick="gen_word(4)" style="color:rgb(198, 186, 186)">
+        <button id="colorbutton" onclick="gen_word(4)" style="color:#cfc8c8">
             Give me a fake color.
         </button>
         <div id="gibberish" class="word">
