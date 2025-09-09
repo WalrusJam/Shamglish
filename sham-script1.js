@@ -11,7 +11,7 @@ function screenshot() {
 }  
 
 function rand_hex () {
-    hex_code = "#"
+    let hex_code = "#"
     for (let i = 0; i < 3; ++i) {
         let rgb_value = Math.round(255*Math.random());
         if (rgb_value.toString(16).length == 1) {
@@ -29,7 +29,7 @@ function gen_word (max_pair_len) {
     
     let pair_length = Math.round((max_pair_len - 1) * Math.random()) + 1
 
-    let consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x', 'z', 'ch', 'th', 'gh', 'st', 'sp', 'sh', 'fl', 'bl', 'gl', 'kl', 'cl', 'pl', 'pr', 'sl', 'sm', 'sn', 'gl', 'wh', 'ph', 'spl', 'sch', 'y', 'br', 'cr', 'dr', 'fr', 'gr', 'kr', 'tr', 'str', 'wr'];
+    let consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x', 'z', 'ch', 'th', 'gh', 'st', 'sp', 'sh', 'fl', 'bl', 'gl', 'kl', 'cl', 'pl', 'pr', 'sl', 'sm', 'sn', 'gl', 'wh', 'ph', 'spl', 'sch', 'br', 'cr', 'dr', 'fr', 'gr', 'kr', 'tr', 'str', 'wr', 'y']; //ensure that 'y' is at end
     let middle_consonants = ['bb', 'ck', 'dd', 'ff', 'gg', 'll', 'lm', 'ln', 'mm', 'mn', 'nn', 'pp', 'rr', 'ss', 'tt', 'tl', 'vv', 'ng', 'xpl', 'zz', 'zzl', 'ssl', 'ddl', 'ckl', 'bbl', 'ffl', 'ggl', 'ppl', 'ttl', 'ntl', 'ngl', 'mpl', 'stl', 'ncl', 'nc', 'ct', 'ntr', 'nd', 'ndl', 'nf', 'nk', 'nkl', 'nf', 'mp', 'nr', 'ns', 'nt', 'mt', 'nw', 'nch', 'nth', 'nsh', 'rd', 'rsh', 'rch', 'rk', 'rb', 'rd', 'rc', 'rf', 'rg', 'rl', 'rm', 'rn', 'rp', 'rs', 'rt', 'rth', 'rv', 'fr', 'ts', 'vr']
     let vowels = ['a','e','o','u','i','y'];
     let common_double_vowels = ['ea', 'ai', 'ia', 'ou', 'oi', 'eu', 'au', 'oa', 'ei', 'ie', 'io', 'iu', 'ui', 'ee', 'oo']
@@ -72,6 +72,7 @@ function gen_word (max_pair_len) {
 
     let c = '';
     let v = '';
+    let pair = '';
     for (let i = 0; i < pair_length; ++i) {
         let double_vowel = Math.random() > 0.7 ? true : false;
         let triple_plus_vowel = Math.random() > 0.9 ? true : false;
