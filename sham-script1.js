@@ -1,13 +1,8 @@
 function screenshot() {
-    /*const title = document.getElementById('pagetitle');
-    const button = document.getElementById('colorbutton');
-    title.hidden = true;
-    button.hidden = true;*/
     html2canvas(document.body).then(function(canvas) {
         canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({[blob.type]: blob})]))
     });
-    /*title.hidden = false;
-    button.hidden = false;*/
+    add_screenshot_message();
 }  
 
 function rand_hex () {
@@ -21,6 +16,27 @@ function rand_hex () {
     }
     return hex_code;
 }
+
+function add_screenshot_message () {
+    const word_div = document.getElementById('gibberish');
+    word_div.removeEventListener('click', screenshot)
+    word_div.addEventListener('mouseleave', remove_screenshot_message);
+    word_div.id = 'gibberish_sc';
+}
+
+function remove_screenshot_message () {
+    const word_div = document.getElementById('gibberish_sc');
+    word_div.removeEventListener('mouseleave', remove_screenshot_message)
+    word_div.addEventListener('mouseenter', reset_screenshot_message);
+}
+
+function reset_screenshot_message () {
+    const word_div = document.getElementById('gibberish_sc');
+    word_div.removeEventListener('mouseenter', reset_screenshot_message)
+    word_div.addEventListener('click', screenshot);
+    word_div.id = 'gibberish';
+}
+
 function gen_word (max_pair_len) {
     const word_div = document.getElementById('gibberish');
     const color_div = document.getElementById('accentcolor');
