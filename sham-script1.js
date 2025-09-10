@@ -1,13 +1,13 @@
 function screenshot() {
-    const title = document.getElementById('pagetitle');
+    /*const title = document.getElementById('pagetitle');
     const button = document.getElementById('colorbutton');
     title.hidden = true;
-    button.hidden = true;
-    html2canvas(document.body, {scale: 2}).then(function(canvas) {
+    button.hidden = true;*/
+    html2canvas(document.body).then(function(canvas) {
         canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({[blob.type]: blob})]))
     });
-    title.hidden = false;
-    button.hidden = false;
+    /*title.hidden = false;
+    button.hidden = false;*/
 }  
 
 function rand_hex () {
@@ -109,5 +109,4 @@ function gen_word (max_pair_len) {
     document.body.style = 'background-color:'+new_color;
     document.getElementById('pagetitle').style='color:#ffffff';
     document.getElementById('colorbutton').style='color:'+new_color;
-    document.styleSheets[0].cssRules[4].style.textShadow="0.5px 0.5px 1px "+new_color;
 }
