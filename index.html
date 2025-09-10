@@ -101,7 +101,7 @@
                 font-size: min(12.5vw, 18.75vh);
                 transition: all 0.2s ease;
             }
-            .word:hover::after {
+            .word::after {
                 position: fixed;
                 top: 0%;
                 left: 50%;
@@ -111,15 +111,23 @@
                 width: min(21.25vw,21.25vh);
                 height: min(3.75vw,3.75vh);
                 content: "Click to screenshot";
-                color: rgb(255, 255, 255, 0.8);
+                color: transparent;
                 font-size: min(2.5vw,2.5vh);
                 text-shadow: none;
                 transition: all 0.2 ease;
                 padding: min(0.9vw, 0.9vh);
-                border: 2px solid rgb(255, 255, 255, 0.8);
+                border: 2px solid transparent;
                 border-radius: min(3vw, 3vh);
+                transition: all 0.2s ease;
+            }
+            .word:hover::after {
+                content: "Click to screenshot";
+                color: rgb(255, 255, 255, 0.8);
+                border: 2px solid rgb(255, 255, 255, 0.8);
             }
             .word:active::after {
+                color: rgb(255, 255, 255, 0.8);
+                border: 2px solid rgb(255, 255, 255, 0.8);
                 content: "Screenshot copied!";
             }
             @keyframes pop {
@@ -146,9 +154,5 @@
         <button id="colorbutton" onclick="gen_word(4)" style="color:#cfc8c8" data-html2canvas-ignore="true">
             Give me a fake color.
         </button>
-        <div id="gibberish" class="word">
-        </div>
-        <div id="accentcolor" class="hex">
-        </div>
     </body>
 </html>

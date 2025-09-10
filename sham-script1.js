@@ -24,8 +24,10 @@ function rand_hex () {
 function gen_word (max_pair_len) {
     const word_div = document.getElementById('gibberish');
     const color_div = document.getElementById('accentcolor');
-    word_div.remove();
-    color_div.remove();
+    if (word_div != null && color_div != null) {
+        word_div.remove();
+        color_div.remove();
+    }
     
     let pair_length = Math.round((max_pair_len - 1) * Math.random()) + 1
 
