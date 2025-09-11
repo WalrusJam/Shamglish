@@ -38,7 +38,10 @@ function reset_screenshot_message () {
 }
 
 function gen_word (max_pair_len) {
-    const word_div = document.getElementById('gibberish');
+    let word_div = document.getElementById('gibberish');
+    if (word_div == null) {
+        word_div = document.getElementById('gibberish_sc');
+    }
     const color_div = document.getElementById('accentcolor');
     if (word_div != null && color_div != null) {
         word_div.remove();
