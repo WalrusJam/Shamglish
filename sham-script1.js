@@ -48,12 +48,12 @@ function gen_word (max_pair_len) {
     let pair_length = Math.round((max_pair_len - 1) * Math.random()) + 1
 
     let consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x', 'z', 'ch', 'th', 'gh', 'st', 'sp', 'sh', 'fl', 'bl', 'gl', 'kl', 'cl', 'pl', 'pr', 'sl', 'sm', 'sn', 'gl', 'wh', 'ph', 'spl', 'sch', 'br', 'cr', 'dr', 'fr', 'gr', 'kr', 'tr', 'str', 'wr', 'y']; //ensure that 'y' is at end
-    let middle_consonants = ['bb', 'ck', 'dd', 'ff', 'gg', 'll', 'lm', 'ln', 'mm', 'mn', 'nn', 'pp', 'rr', 'ss', 'tt', 'tl', 'vv', 'ng', 'xpl', 'zz', 'zzl', 'ssl', 'ddl', 'ckl', 'bbl', 'ffl', 'ggl', 'ppl', 'ttl', 'ntl', 'ngl', 'mpl', 'stl', 'ncl', 'nc', 'ct', 'ntr', 'nd', 'ndl', 'nf', 'nk', 'nkl', 'nf', 'mp', 'nr', 'ns', 'nt', 'mt', 'nw', 'nch', 'nth', 'nsh', 'rd', 'rsh', 'rch', 'rk', 'rb', 'rd', 'rc', 'rf', 'rg', 'rl', 'rm', 'rn', 'rp', 'rs', 'rt', 'rth', 'rv', 'fr', 'ts', 'vr', 'dl']
+    let middle_consonants = ['bb', 'ck', 'dd', 'ff', 'gg', 'll', 'lm', 'ln', 'mm', 'mn', 'nn', 'pp', 'rr', 'ss', 'tt', 'tl', 'vv', 'ng', 'xpl', 'zz', 'zzl', 'ssl', 'ddl', 'ckl', 'bbl', 'ffl', 'ggl', 'ppl', 'ttl', 'ntl', 'ngl', 'mpl', 'stl', 'ncl', 'nc', 'ct', 'ntr', 'nd', 'ndl', 'nf', 'nk', 'nkl', 'nf', 'mp', 'nr', 'ns', 'nt', 'mt', 'nw', 'nch', 'nth', 'nsh', 'rd', 'rsh', 'rch', 'rk', 'rb', 'rd', 'rc', 'rf', 'rg', 'rl', 'rm', 'rn', 'rp', 'rs', 'rt', 'rth', 'rv', 'fr', 'ts', 'vr', 'dl', 'wn']
     let vowels = ['a','e','o','u','i','y'];
     let common_double_vowels = ['ea', 'ai', 'ia', 'ou', 'oi', 'eu', 'au', 'oa', 'ei', 'ie', 'io', 'iu', 'ui', 'ee', 'oo']
     let vowels_three_plus = ['eau', 'uai', 'uie', 'oui', 'ieu', 'iou'];
-    let endings = ['c', 'sm', 'st', 'n', 's', 'y', 'ey', 'l', 'ng', 'ck', 'ff', 'll', 'lm', 'ln', 'mn', 'm', 'pp', 'ss', 'tt', 'zz', 'nk', 'nc', 'nd', 'mp', 'nt', 'ns', 'mt', 'd', 'nch', 'nth', 'nsh', 'rd', 'rsh', 'rch', 'rk', 'rb', 'rd', 'rc', 'rf', 'rg', 'rm', 'rn', 'rp', 'rs', 'rt', 'rth', 'sch']
-    let common_endings = ['ious', 'ic', 'ous', 'ism', 'ist', 'ion', 'ian', 'ain', 'us', 'y', 'ng', 'ize', 'ice', 'ess', 'er', 'or', 'ar'];
+    let endings = ['c', 'sm', 'st', 'n', 's', 'y', 'ey', 'l', 'ng', 'ck', 'ff', 'll', 'lm', 'ln', 'mn', 'm', 'pp', 'ss', 'tt', 'zz', 'nk', 'nc', 'nd', 'mp', 'nt', 'ns', 'mt', 'd', 'nch', 'nth', 'nsh', 'rd', 'rsh', 'rch', 'rk', 'rb', 'rd', 'rc', 'rf', 'rg', 'rm', 'rn', 'rp', 'rs', 'rt', 'rth', 'sch', 't', 'p', 'b', 'r', 'w', 'x', 'wn']
+    let common_endings = ['ious', 'ic', 'ous', 'ism', 'ist', 'ion', 'ian', 'ain', 'us', 'y', 'ng', 'ize', 'ice', 'ess', 'er', 'or', 'ar', 'ique', 'ity', 'al'];
     
     let pairs = [];
 
