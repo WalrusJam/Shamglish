@@ -8,11 +8,11 @@ function screenshot() {
 function rand_hex () {
     let hex_code = "#"
     for (let i = 0; i < 3; ++i) {
-        let rgb_value = Math.round(255*Math.random());
-        if (rgb_value.toString(16).length == 1) {
+        let rgb_value = Math.round(255*Math.random()).toString(16);
+        if (rgb_value.length == 1) {
             hex_code += "0";
         }
-        hex_code += rgb_value.toString(16);
+        hex_code += rgb_value;
     }
     return hex_code;
 }
