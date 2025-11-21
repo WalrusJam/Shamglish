@@ -61,7 +61,7 @@ function gen_word (max_pair_len) {
     let pairs = [];
 
     function pick_consonant(chance_middle, chance_none, prev_vowel) {
-        let exclude_y = prev_vowel[prev_vowel-1] == 'y' ? true : false;
+        let exclude_y = prev_vowel[prev_vowel.length-1] == 'y' ? true : false;
         let c = consonants[Math.round((consonants.length-(exclude_y ? 2 : 1)) * Math.random())];
         c = Math.random() < chance_middle ? middle_consonants[Math.round((middle_consonants.length-1) * Math.random())] : c;
         c = Math.random() < chance_none ? '' : c;
